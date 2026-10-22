@@ -1,8 +1,8 @@
 {
   "name": "LangkahLokal Shoe Co.",
   "short_name": "LangkahLokal",
-  "description": "Toko Sepatu Lokal Indonesia Berkualitas Ekspor",
-  "start_url": "./",
+  "description": "Toko Sepatu Lokal Indonesia Berkualitas",
+  "start_url": "/",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -10,13 +10,13 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/1087/1087815.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/1087/1087815.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
