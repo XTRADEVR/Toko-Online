@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1e293b">
+  <meta name="description" content="LangkahLokal - Toko Sepatu Lokal Berkualitas Terbaik Buatan Anak Bangsa">
+  <title>LangkahLokal Co. | Sepatu Lokal Indonesia</title>
+
+  <!-- PWA Manifest & Icons -->
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://cdn-icons-png.flaticon.com/512/1087/1087815.png">
+  <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1087/1087815.png">
+
+  <!-- Stylesheet Flat -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Top App Bar -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">ID</span>
+        <h1>LangkahLokal</h1>
+      </div>
+      <button id="cartBtn" class="icon-btn" aria-label="Keranjang Belanja">
+        🛒
+        <span id="cartBadge" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    
+    <!-- VIEW: KATALOG PRODUK -->
+    <section id="viewCatalog" class="view-section active">
+      <!-- Search & Filter Controls -->
+      <div class="filter-box">
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Cari sneakers, boots, sandal...">
+          <button id="clearSearch" class="clear-btn">&times;</button>
+        </div>
+        
+        <div class="chip-scroll" id="categoryChips">
+          <button class="chip active" data-cat="all">Semua</button>
+          <button class="chip" data-cat="Sneakers">Sneakers</button>
+          <button class="chip" data-cat="Boots">Boots</button>
+          <button class="chip" data-cat="Loafers">Loafers</button>
+          <button class="chip" data-cat="Slip-On">Slip-On</button>
+          <button class="chip" data-cat="Sandal">Sandal</button>
+        </div>
+
+        <div class="size-filter-row">
+          <label for="sizeFilter">Filter Ukuran:</label>
+          <select id="sizeFilter">
+            <option value="all">Semua Ukuran (38 - 44)</option>
+            <option value="38">Size 38</option>
+            <option value="39">Size 39</option>
+            <option value="40">Size 40</option>
+            <option value="41">Size 41</option>
+            <option value="42">Size 42</option>
+            <option value="43">Size 43</option>
+            <option value="44">Size 44</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid">
+        <p class="loading-text">Memuat katalog sepatu lokal...</p>
+      </div>
+    </section>
+
+    <!-- VIEW: WISHLIST -->
+    <section id="viewWishlist" class="view-section">
+      <h2 class="section-title">Sepatu Favorit Kamu ❤️</h2>
+      <div class="product-grid" id="wishlistGrid">
+        <p class="empty-state">Belum ada produk favorit. Klik ikon hati pada katalog untuk menambahkan!</p>
+      </div>
+    </section>
+
+    <!-- VIEW: RIWAYAT PESANAN -->
+    <section id="viewHistory" class="view-section">
+      <h2 class="section-title">Riwayat Pesanan 📦</h2>
+      <div id="orderHistoryList" class="history-list">
+        <p class="empty-state">Belum ada riwayat pesanan.</p>
+      </div>
+    </section>
+
+    <!-- VIEW: PROFIL TOKO -->
+    <section id="viewProfile" class="view-section">
+      <div class="profile-card">
+        <div class="store-avatar">👞</div>
+        <h2>LangkahLokal Co.</h2>
+        <p class="tagline">"Karya Pengrajin Lokal, Kualitas Internasional"</p>
+        
+        <div class="store-info-list">
+          <div class="info-item">
+            <strong>📍 Alamat Workshop:</strong>
+            <span>Cibaduyut Footwear Hub No. 45, Bandung, Jawa Barat</span>
+          </div>
+          <div class="info-item">
+            <strong>⏰ Jam Operasional:</strong>
+            <span>Senin - Sabtu (08.00 - 20.00 WIB)</span>
+          </div>
+          <div class="info-item">
+            <strong>🛡️ Garansi Pengrajin:</strong>
+            <span>Tukar size gratis 7 hari & garansi sol 60 hari</span>
+          </div>
+          <div class="info-item">
+            <strong>💬 WhatsApp Support:</strong>
+            <span>+62 812-3456-7890</span>
+          </div>
+        </div>
+
+        <button class="btn btn-outline" id="installPwaBtn" style="display:none; margin-top: 1.5rem; width:100%;">
+          📲 Install Aplikasi LangkahLokal
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-target="viewCatalog">
+      <span class="nav-icon">🏪</span>
+      <span class="nav-label">Katalog</span>
+    </button>
+    <button class="nav-item" data-target="viewWishlist">
+      <span class="nav-icon">❤️</span>
+      <span class="nav-label">Favorit</span>
+    </button>
+    <button class="nav-item" data-target="viewHistory">
+      <span class="nav-icon">📜</span>
+      <span class="nav-label">Riwayat</span>
+    </button>
+    <button class="nav-item" data-target="viewProfile">
+      <span class="nav-icon">🏬</span>
+      <span class="nav-label">Toko</span>
+    </button>
+  </nav>
+
+  <!-- MODAL DETAIL PRODUK -->
+  <div id="productModal" class="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close" id="closeDetailBtn">&times;</button>
+      <div class="modal-body" id="modalProductDetail">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- DRAWER KERANJANG BELANJA & CHECKOUT -->
+  <div id="cartDrawer" class="drawer-backdrop">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <h3>Keranjang Belanja 🛍️</h3>
+        <button id="closeCartBtn" class="close-btn">&times;</button>
+      </div>
+      
+      <div id="cartItemsList" class="cart-items-container">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary">
+          <span>Total Pembayaran:</span>
+          <strong id="cartTotalPrice">Rp 0</strong>
+        </div>
+
+        <!-- Checkout Form Input -->
+        <div class="checkout-form">
+          <input type="text" id="custName" placeholder="Nama Lengkap Pemesan *" required>
+          <textarea id="custAddress" placeholder="Alamat Pengiriman Lengkap (Kecamatan, Kota, Kode Pos) *" rows="2" required></textarea>
+          <select id="custPayment">
+            <option value="Transfer Bank BCA / Mandiri">Transfer Bank (BCA / Mandiri)</option>
+            <option value="QRIS Instant (GoPay/OVO/ShopeePay)">QRIS (GoPay / OVO / Dana)</option>
+            <option value="COD (Bayar di Tempat)">COD (Bayar di Tempat)</option>
+          </select>
+          <button id="btnOrderWhatsapp" class="btn btn-whatsapp">
+            📲 Pesan Langsung via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Registration PWA & Logic Flat -->
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js', { scope: './' })
+          .then((reg) => console.log('Service Worker Registered on scope:', reg.scope))
+          .catch((err) => console.error('Service Worker Registration Failed:', err));
+      });
+    }
+  </script>
+  <script src="./app.js"></script>
+</body>
+    </html>
