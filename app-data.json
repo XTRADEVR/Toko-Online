@@ -1,0 +1,56 @@
+[
+  {
+    "id": "SP-001",
+    "nama": "Langkah Vulcanized Low Black White",
+    "kategori": "Sneakers",
+    "harga": 289000,
+    "ukuran": [38, 39, 40, 41, 42, 43],
+    "foto": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80",
+    "deskripsi": "Sneakers klasik kanvas 12oz dengan teknik vulcanized sol karet mentah. Nyaman untuk daily beater, awet, dan ramah kantong."
+  },
+  {
+    "id": "SP-002",
+    "nama": "Heritage Oxford Stitchdown Boots Tan",
+    "kategori": "Boots",
+    "harga": 549000,
+    "ukuran": [39, 40, 41, 42, 43, 44],
+    "foto": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=600&q=80",
+    "deskripsi": "Sepatu bot kulit sapi asli Pull-Up Jawa Barat dengan konstruksi stitchdown kuat dan outsol commando anti-slip."
+  },
+  {
+    "id": "SP-003",
+    "nama": "Urban Penny Loafers Leather Dark Brown",
+    "kategori": "Loafers",
+    "harga": 479000,
+    "ukuran": [40, 41, 42, 43],
+    "foto": "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=600&q=80",
+    "deskripsi": "Loafers elegan untuk acara semi-formal dan ngantor. Lapisan dalam lambskin super lembut tanpa bikin lecet kaki."
+  },
+  {
+    "id": "SP-004",
+    "nama": "Kompak Runner Breathable Cream",
+    "kategori": "Sneakers",
+    "harga": 349000,
+    "ukuran": [38, 39, 40, 41, 42, 43, 44],
+    "foto": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    "deskripsi": "Sneakers sport lifestyle dengan upper engineered mesh sejuk dan insole Phylon empuk layaknya melayang di awan."
+  },
+  {
+    "id": "SP-005",
+    "nama": "Santai Slide Corduroy Olive",
+    "kategori": "Sandal",
+    "harga": 159000,
+    "ukuran": [38, 39, 40, 41, 42],
+    "foto": "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=600&q=80",
+    "deskripsi": "Sandal slide kasual berbalut kain corduroy vintage dengan tatakan kaki anatomis EVA yang menyangga telapak dengan sempurna."
+  },
+  {
+    "id": "SP-006",
+    "nama": "Easy Slip-On Checkerboard Charcoal",
+    "kategori": "Slip-On",
+    "harga": 269000,
+    "ukuran": [39, 40, 41, 42, 43],
+    "foto": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=600&q=80",
+    "deskripsi": "Praktis tanpa tali, tinggal selop langsung berangkat. Motif monokrom minimalis cocok dengan celana jeans maupun chinos."
+  }
+]
